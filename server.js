@@ -23,7 +23,10 @@ client.on('guildMemberAdd', member => {
 
     console.log(reason);
     member.
-      ban(reason).
+      ban({
+        reason: reason,
+        days: 7
+      }).
       catch(console.error);
   }
 });
