@@ -9,8 +9,6 @@ client.on("ready", () => {
 });
 
 client.on('guildMemberAdd', member => {
-  console.log(`"${member.displayName}" just joined the server...`)
-
   let bannableName = false;
   config.regexes.forEach(matcher => {
     const regex = new RegExp(matcher.match, matcher.flags);
@@ -21,7 +19,7 @@ client.on('guildMemberAdd', member => {
   });
 
   if (bannableName) {
-    const reason = `This user's name "${member.displayName}" did not meet the standards of this server.`
+    const reason = `The username "${member.displayName}" did not meet the standards of ${member.guild.name}.`
 
     console.log(reason);
     member.
