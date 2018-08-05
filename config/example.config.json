@@ -1,0 +1,9 @@
+{
+  "token": "YOUR TOKEN GOES HERE",
+  "regexes": [
+    {
+      "match": "discord.gg",
+      "flags": "gi"
+    }
+  ]
+}
